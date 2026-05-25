@@ -70,7 +70,7 @@ public class LoginTest {
     }
     
     public class MessageTest {
-        
+        //Added unit test for message length
         @Test
         public void testMessageLengthSuccess() {
              Message msg = new Message(
