@@ -37,7 +37,7 @@ public class Message {
     public boolean checkMessageID() {
         return messageID.length() <=10;
     }
-    
+    //Added recipient validation
     public String checkRecipientCell() {
         if (recipient.matches("^\\+27\\d{9}$")) {
             return "Cell phone number successfully captured.";
