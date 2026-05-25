@@ -22,6 +22,7 @@ public class Main {
         int totalMessages = input.nextInt();
         input.nextLine();
         
+        //Added loop for multiple messages
         for (int i = 1; i <= totalMessages; i++) {
             System.out.println("\nMessage " + i);
             
