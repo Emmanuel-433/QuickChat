@@ -9,6 +9,8 @@ import java.util.Scanner;
  *
  * @author Student
  */
+
+//Created main class menu
 public class Main {
     
     public static void main(String[] args, String longMessage) {
