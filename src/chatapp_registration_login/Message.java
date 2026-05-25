@@ -27,6 +27,7 @@ public class Message {
         this.messageHash = createMessageHash();
     }
     
+    //Added message ID generator
     private String generateMessageID() {
         Random random = new Random();
         long number = 1000000000L + (long)(random.nextDouble() * 9000000000L);
