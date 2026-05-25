@@ -97,7 +97,7 @@ public class LoginTest {
                             msg.checkMessageLength().contains("Message exceeds")
              );
         }
-        
+        //Added unit test for recipient validation
         @Test
         public void testRecipientSuccess() {
              Message msg = new Message(
