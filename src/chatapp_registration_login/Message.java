@@ -55,6 +55,7 @@ public class Message {
         }
     }
     
+    //Implemented message hash method
     public String createMessageHash() {
         String[] words = message.split(" ");
         
