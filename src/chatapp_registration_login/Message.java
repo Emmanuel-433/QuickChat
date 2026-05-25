@@ -93,7 +93,7 @@ public class Message {
                 "\nRecipient: " + recipient +
                 "\nMessage: " + message;
     }
-    
+    //Implemented total message counter
     public static int returnTotalMessages() {
         return totalMessages;
     }
