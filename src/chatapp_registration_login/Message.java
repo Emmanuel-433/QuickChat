@@ -68,6 +68,7 @@ public class Message {
                 lastWord.toUpperCase();
     }
     
+    // Added send message feature
     public String sendMessage(int choice) {
         switch(choice) {
             case 1:
