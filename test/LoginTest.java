@@ -3,6 +3,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/UnitTests/JUnit5TestClass.java to edit this template
  */
 import chatapp_registration_login.Login;
+import chatapp_registration_login.Message;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -67,4 +68,59 @@ public class LoginTest {
         String message = login.loginUser("Ka_1", "wrongPass");
         assertEquals("Username or password incorrect.Please try again.", message);
     }
+    
+    public class MessageTest {
+        
+        @Test
+        public void testMessageLengthSuccess() {
+             Message msg = new Message(
+                     1,
+                     "+27718693002",
+                     "Hi Mike can you join us tonight"
+             );
+             assertEquals(
+                    "Message ready to send.",
+                     msg.checkMessageLength()
+             );
+        }
+        
+        @Test
+        public void testMessageLengthFailure() {
+            String longMessage = "a".repeat(260);
+            
+            Message msg = new Message(
+                    1,
+                    "+27718693002",
+                    longMessage
+             );
+                    assertTrue(
+                            msg.checkMessageLength().contains("Message exceeds")
+             );
+        }
+        
+        @Test
+        public void testRecipientSuccess() {
+             Message msg = new Message(
+                     1,
+                     "+27718693002",
+                     "Hello"
+             );
+             assertEquals(
+                    "Cell phone number successfully captured.",
+                     msg.checkRecipientCell()
+             );
+        }
+        
+        @Test
+        public void testMessageID() {
+            
+            Message msg = new Message(
+            1,
+            "+27718693002",
+            "Hello"
+            );
+            assertTrue(msg.checkMessageID());
+        }
+    }
 }
+
