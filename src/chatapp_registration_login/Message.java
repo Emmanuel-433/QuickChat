@@ -9,6 +9,7 @@ import java.util.Random;
  *
  * @author Student
  */
+//Create Message class
 public class Message {
     private String messageID;
     private int messageNumber;
