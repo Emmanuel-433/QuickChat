@@ -86,6 +86,7 @@ public class Message {
         }
     }
     
+    //Added printMessages fuctionality
     public String printMessages() {
         return "Message ID: " + messageID +
                 "\nMessage Hash: " + messageHash +
