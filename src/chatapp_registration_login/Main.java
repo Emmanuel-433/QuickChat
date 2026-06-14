@@ -42,14 +42,40 @@ public class Main {
                 System.out.println("1. Send Message");
                 System.out.println("2. Store Message");
                 System.out.println("3. Disregard Message");
+                System.out.println("4. Stored Messages");
                 
                 int choice = input.nextInt();
                 input.nextLine();
                 
                 System.out.println(msg.sendMessage(choice));
+                MessageManager manager = new MessageManager();
                 
                 if (choice == 1) {
                     System.out.println(msg.printMessages());
+                }
+                if (choice == 2) {
+                    System.out.println("Message successully stored.");
+                }
+                if (choice == 3) {
+                    System.out.println("Message disregarded.");
+                }
+                if (choice == 4) {
+                    manager.displayStoredMessages();
+                    
+                    System.out.println("\nLongest Stored Message:");
+                    System.out.println(manager.getLongestMessage());
+                    
+                    System.out.println("\nSearch ny recipient:");
+                    manager.searchRecipient("+27838884567");
+                    
+                    System.out.println("\nSearch by Message ID:");
+                    manager.searchMessageID("0838884567");
+                    
+                    System.out.println("\nDelete Message:");
+                    manager.deleteMessage("HASH002");
+                    
+                    System.out.println("\nStored Messages Report:");
+                    manager.displayReport(); 
                 }
             }
             
@@ -57,5 +83,11 @@ public class Main {
         }
         System.out.println("\nTotal messages sent: "
                 + Message.returnTotalMessages());
+        
+        MessageManager manager = new MessageManager();
+        manager.loadTestData();
+        manager.displayStoredMessages();
     }
 }
+
+
